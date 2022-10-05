@@ -29,7 +29,11 @@ Route::get('reserve/interview', [InterviewController::class, 'create']);
 Route::post('reserve/interview', [InterviewController::class, 'store'])
 ->name('interview_store');
 
-Route::get('reserve/interview', [InterviewController::class, 'create']);
+//Route::get('reserve/interview', [InterviewController::class, 'create']);
+
+// ★認証済みのみOK
+Route::get('reserve/interview', [InterviewController::class, 'create'])
+->middleware(['auth', 'verified']);
 
 Route::get('reserve/interview/show/{id}', [InterviewController::class, 'show'])
 ->name('interview_show');

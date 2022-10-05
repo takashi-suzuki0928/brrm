@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('answer_10',255)->nullable();
             $table->boolean('answer_11');
             $table->string('answer_12',255)->nullable();
-            $table->string('answer_13',255);
+            $table->string('answer_13',255)->nullable();
             $table->string('answer_13_t',255)->nullable();
             $table->boolean('answer_14');
             $table->boolean('answer_15');
